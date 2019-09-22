@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/Estilos.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <title>#{msg['inicio.Titulo']}</title>
+    </h:head>
+    <h:body>
+        <form id="formulario">
+            <div class="login-page">
+                <div class="form">
+                    <h:form class="login-form">
+                        <p:messages autoUpdate="true" showDetail="true"/>
+                        <h1 class="titulos">#{msg['inicio.TituloForm']}</h1>
+                        <!--<input />
+                        <input />-->
+                        <p:inputText type="text" id="ipt_usuario" value="#{inicioController.usuarios.usuario}" placeholder="#{msg['inicio.phUsuario']}" maxlength="20" required="true" />
+                        <p:inputText type="password" id="ipt_clave" value="#{inicioController.usuarios.clave}" placeholder="#{msg['inicio.phClave']}" maxlength="15" required="true"/>
+                        <p:separator/>
+                        <button type="submit" jsf:actionListener="#{inicioController.iniciarSesion()}">#{msg['inicio.boton']}</button>
+                    </h:form>
+                </div>
+            </div>
+  	</form>
+    </h:body>
+</html>
+
